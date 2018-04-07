@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EcoHomes</title>
+  <meta charset="utf-8"/>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="CSS/Eco.css">
+</head>
+<body>
+
+  <header>
+    <div id="headfix">
+  <div class= "logobar">
+
+  <a href="Home.html" class="logo">NB</a>
+  </div>
+
+  <div class="navigation-bar">
+
+    <nav class="navhead">
+       <a href="Home.html">Home</a>
+      <a href="Home.html#section2">Portfolio</a>
+      <a href="https://docs.wixstatic.com/ugd/de7847_d38e86be2ae548338077a63307690db9.pdf" target="_blank">Resume</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </div>
+  </div>
+  </header>
+
+    <section class="jumbotron">
+       <div class="overlay"></div>
+       <div class="container">
+          <div>
+             <h2>EcoHomes</h2>
+           </div>
+           <div>
+             <h3> Mobile Application for Green Rental Housing</h3>
+           </div>
+           <div>
+            <h5>Course: Interaction Design</h5>
+           </div>
+        <div>
+      <a class="btn btn-primary"  role="button">Scoll down</a>
+
+    </div>
+    <a href="#section3">
+    <p><i class="arrow down"></i></p>
+  </a>
+  </div>
+</section>
+
+<div id="section3"></div>
+<h4>Overview
+<div id="line">
+</h4>
+
+<div class="paras">
+<p>Sustainability as a way of life is developing rapidly in the country, however, still lags far behind in the state of Michigan. The intervention is based upon a project by the City of Ann Arbor called ‘Green Rental Housing’ which aims to increase energy efficiency in the community by targeting the housing market.</p>
+
+<img src="Images/stats.jpg" alt="stats" class="image">
+<h4>Competitive Analysis
+  <div id="line">
+  </div>
+</h4>
+
+<p>Detailed competitive analysis of these tools suggested that only two tools are formally designed for customers to look for green homes – Greenhomesforsale and Sustainable House Day, but both are just web based tools.
+
+The other three tools serve only a very limited part of the context such as rental search and relevant information.</p>
+<img src="Images/ca.png" alt="competitive analysis" class="image">
+
+<h4>User Analysis
+<div id="line">
+</h4>
+<p>To get an understanding of who the target audience are, their needs and motivations, I sent out a 15-question survey to the academic community of the University. Click here to access the survey.
+
+Having received a total of 53 responses, following were the key takeaways: </p>
+</div>
+
+<footer>
+
+
+<div class="footnav">
+  <div>
+
+  <p class="copywright">&copy; Nalin Bhatia | 2018</p>
+  </div>
+
+  <ul class="socialnav">
+     <a href="https://www.linkedin.com/in/nalinbhatia/" target="_blank"><img src="https://png.icons8.com/ios/50/FFFFFF/linkedin-filled.png" class="icon"></a>
+    <a href="https://plus.google.com/116453238195990192577" target="_blank"><img src="https://png.icons8.com/ios/50/FFFFFF/google-plus.png" class="icon"></a>
+    <a href="https://www.facebook.com/nalinb1" target="_blank"><img src="https://png.icons8.com/ios-glyphs/50/FFFFFF/facebook.png" class="icon"></a>
+    <a href="https://twitter.com/nalin_bhatia" target="_blank"><img src="https://png.icons8.com/ios/50FFFFFF/twitter-filled.png" class="icon"></a>
+  </ul>
+</div>
+</div>
+</footer>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+
+    console.log(this, this.href.split("#")[0], window.location.pathname);
+    if (this.hash !== "" && this.href.split("#")[0]===(window.location.origin+ window.location.pathname)) {
+      event.preventDefault();
+      var trans = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(trans).offset().top
+      }, 900, function(){
+
+
+        window.location.hash = trans;
+      });
+    }
+  });
+});
+</script>
+
+</body>
+
+</html>
